@@ -11,6 +11,8 @@ h1 {
   color: rgb(243, 208, 208);
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  bottom: 10px;
 }
 
 body {
@@ -20,19 +22,6 @@ body {
   /* background-color: #B57E4A; */
   /* background-color: black; */
   background-image: url("background.jpg");
-}
-
-.flex1 {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  background-color: cadetblue;
-  width: 300px;
-  height: 300px;
-  border-color: black;
-  /* border-width: 1px; */
-  border-style: solid;
-  margin: 20px;  
 }
 
 .dchm {
@@ -51,6 +40,8 @@ body {
   margin: 20px;
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 30px;
 }
 
 .showCredits{
@@ -153,6 +144,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(243, 208, 208);
   font-weight: bold;
+  position: relative;
+  bottom: 90px;
 }
 
 .card {
@@ -186,6 +179,8 @@ body {
   font-size: large;
   color: rgb(243, 208, 208);
   height: 92px;
+  position: relative;
+  bottom: 60px;
 }
 
 .score {
