@@ -11,8 +11,6 @@ h1 {
   color: rgb(243, 208, 208);
   /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-  bottom: 10px;
 }
 
 body {
@@ -40,8 +38,7 @@ body {
   margin: 20px;
   align-items: center;
   justify-content: center;
-  position: relative;
-  bottom: 30px;
+  
 }
 
 .showCredits{
@@ -144,8 +141,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(243, 208, 208);
   font-weight: bold;
-  position: relative;
-  bottom: 90px;
 }
 
 .card {
@@ -179,8 +174,6 @@ body {
   font-size: large;
   color: rgb(243, 208, 208);
   height: 92px;
-  position: relative;
-  bottom: 60px;
 }
 
 .score {
@@ -234,4 +227,28 @@ table {
     font-size: 18px;
   }
 
+}
+
+@media only screen and (max-width: 767px) {
+  h1{
+  position: relative;
+  bottom: 10px;
+  }
+
+  .dchm{
+    position: relative;
+    bottom: 30px;
+  }
+
+  .flex3 {
+    position: relative;
+    bottom: 90px;
+    height: 180px;
+    font-size: 14px;
+  }
+
+  .displayMessage{
+    position: relative;
+    bottom: 60px;
+  }
 }
