@@ -39,20 +39,16 @@ const calcHandScore = (hand) => {
       cardRankTally[cardRank] = 1;
     }
   }
-  console.log("cardNameTally",cardNameTally)
-  console.log("cardSuitTally",cardSuitTally)
-  console.log("cardRankTally",cardRankTally)
+
   // ---------------------------- WIN CONDITIONS ----------------------------    
 
   // iterate through the hand first
   for (cardName in cardNameTally){
-    console.log(`There are ${cardNameTally[cardName]} ${cardName}s in the hand`);
-    // console.log("cardName", cardName);
+
     
     // store cards in tempHand array to validate full house and 2 pairs
     tempHand[counter] = cardName;                    
-    // console.log(`tempHand${counter}: `,tempHand[counter])
-    // console.log('length of temphand', tempHand.length)
+
     counter += 1;
 
     // 2. four of a kind (4 same names)
@@ -172,8 +168,6 @@ const calcHandScore = (hand) => {
   cardNameTally = {};
   cardRankTally = {};
   cardSuitTally = {};
-  console.log("obtained score: ", score);
-  console.log('final credits: ', credits);
   console.log(numPair, numTriplet, isPair,
               isTriplet, counter,
               tempHand, cardNameTally, cardSuitTally, cardRankTally);

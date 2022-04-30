@@ -16,11 +16,6 @@ const clickCard = (card, cardIndex) => {
   else {
     clickedCards[cardIndex] = 1;
   }
-
-  for (cardIndex in clickedCards){
-    console.log("CardIndex: ", cardIndex);
-  }
-  console.log("clickedCards object: ",clickedCards)
 }
 
 /**
@@ -30,21 +25,19 @@ const clickCard = (card, cardIndex) => {
 
 const redraw = () => {
   let indices = Object.keys(clickedCards); // indices is array of keys
-  console.log("indices", indices);
-  console.log("LENGTH OF INDICES", indices.length);
-  console.log("clickedCards in redraw", clickedCards);
+
   for (let j = 0; j < indices.length; j+=1){
     let tempIndex = indices[j];
-    console.log('old card', playerHand[tempIndex])
+
     let newCard = deck.pop();
     playerHand[tempIndex] = newCard;
-    console.log('new card', playerHand[tempIndex])
+
 
     let newDrawnCard = document.createElement('div');
     newDrawnCard.classList.add('card');
     newDrawnCard.classList.remove('chosenCard');
     newDrawnCard.innerHTML = `${playerHand[tempIndex].name} <br> ${playerHand[tempIndex].suit}`;
-    console.log("NEW DRAWN CARD", newDrawnCard);
+
 
     if (playerHand[tempIndex].suit === '❤' || playerHand[tempIndex].suit === '♦'){
       newDrawnCard.classList.add('red');
@@ -80,7 +73,7 @@ const redraw = () => {
   }
   redrawButton.remove();
   message.innerText= "";
-  console.log("new playerHand: ", playerHand)
+
 }
 
 /**
@@ -102,7 +95,7 @@ const done = () => {
     }
 
   // show +score for 1500ms, then update credits
-  console.log("score: ", score);
+
   if (score > 0){
     scoreText.innerHTML = `${credits} + ${score}`;
     }
